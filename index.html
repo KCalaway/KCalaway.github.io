@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>So your boyfriend was kidnapped by his friend Jon</title>
+</head>
+<body>
+<p>Consult the man cow, heaven's angel, and the duende defined, and from their clues deduce the password.</p>
+<input type="text" name="password" id="password"/>
+<input type="button" value="submit" onclick="validate()" />
+<div id = "response"></div>
+<script>
+
+function validate(){
+	if(document.getElementById("password").value == "gouda" ||
+			document.getElementById("password").value == "takeo" ||
+			document.getElementById("password").value == "takeo gouda" ||
+			document.getElementById("password").value == "gouda takeo" ||
+			document.getElementById("password").value == "takeokun" ||
+			document.getElementById("password").value == "takeo kun" ||
+			document.getElementById("password").value == "takeo-kun") {
+		readTextFile("jabroni.txt");
+	}
+}
+function readTextFile(file)
+{
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+                alert(allText);
+                document.getElementById("response").value = allText;
+            }
+        }
+    }
+    rawFile.send(null);
+}</script>
+</body>
+</html>
