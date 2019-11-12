@@ -12,13 +12,13 @@
 <script>
 
 function validate(){
-	if(document.getElementById("password").value == "gouda" ||
-			document.getElementById("password").value == "takeo" ||
-			document.getElementById("password").value == "takeo gouda" ||
-			document.getElementById("password").value == "gouda takeo" ||
-			document.getElementById("password").value == "takeokun" ||
-			document.getElementById("password").value == "takeo kun" ||
-			document.getElementById("password").value == "takeo-kun") {
+	if(document.getElementById("password").value.toLowerCase() == "gouda" ||
+			document.getElementById("password").value.toLowerCase() == "takeo" ||
+			document.getElementById("password").value.toLowerCase() == "takeo gouda" ||
+			document.getElementById("password").value.toLowerCase() == "gouda takeo" ||
+			document.getElementById("password").value.toLowerCase() == "takeokun" ||
+			document.getElementById("password").value.toLowerCase() == "takeo kun" ||
+			document.getElementById("password").value.toLowerCase() == "takeo-kun"){
 		readTextFile("jabroni.txt");
 	}
 }
