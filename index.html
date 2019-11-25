@@ -20,7 +20,8 @@ function validate(){
 			document.getElementById("password").value.toLowerCase() == "takeo kun" ||
 			document.getElementById("password").value.toLowerCase() == "takeo-kun"){
 		readTextFile("jabroni.txt");
-	}
+	} else {
+		alert("Incorrect password!");
 }
 function readTextFile(file)
 {
